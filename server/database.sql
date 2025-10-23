@@ -1,0 +1,5 @@
+CREATE DATABASE typetrek;
+
+CREATE TABLE user(
+    id SERIAL PRIMARY KEY
+);
