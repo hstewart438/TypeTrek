@@ -9,7 +9,7 @@ function UserProfile() {
     return (
         isAuthenticated && (
             <>
-                <img src={user.picture} alt="Image not loaded"/>
+                <img src={user.picture} alt="Profile image not loaded"/>
                 <h2>{user.name}</h2>
                 <p>{user.email}</p>
             </>

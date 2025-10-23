@@ -1,17 +1,19 @@
 import './App.css';
-import React, { Fragment } from 'react';
-import LoginButton from './components/loginButton';
-import LogoutButton from './components/logoutButton';
+
+//components
 import UserProfile from './components/userProfile';
+import Navbar from './components/Navbar';
 
 function App() {
   return ( 
     <>
-        <LoginButton/>
-        <LogoutButton/>
+      <Navbar/>
       <ul>
         <UserProfile/>
       </ul>
+      <h1 className="text-3xl font-bold underline">
+      Here is text where things can be added!
+    </h1>
     </>
   );
 }

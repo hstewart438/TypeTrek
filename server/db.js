@@ -5,7 +5,7 @@ const pool = new Pool({
     password: "314555",
     host: "localhost",
     port: "5432",
-    database: "typetrek"
+    database: "TypeTrekDB"
 });
 
 module.exports = pool;
