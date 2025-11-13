@@ -1,6 +1,0 @@
-/* CREATE DATABASE TypeTrekDB;
-
-CREATE TABLE user(
-    id SERIAL PRIMARY KEY
-);
-*/
