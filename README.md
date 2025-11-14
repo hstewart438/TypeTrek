@@ -14,3 +14,12 @@ The React Compiler is currently not compatible with SWC. See [this issue](https:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Supabase Connection
+
+Run the following command:
+npm install @supabase/supabase-js
+
+Create a .env file and add the within the quotes from the supabase website:
+VITE_SUPABASE_URL=""
+VITE_SUPABASE_ANON_KEY=""
