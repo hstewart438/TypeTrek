@@ -4,12 +4,12 @@ import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ children }) => {
     const { session } = UserAuth();
-
-    return (
-        <>
-        {session ? <>{children}</> : <Navigate to="/signup" />}
-        </>
-    );
+  
+    if (session === undefined) {
+      return <div>Loading...</div>;
+    }
+  
+    return <div>{session ? <>{children}</> : <Navigate to="/signup" />}</div>;
 };
 
 export default PrivateRoute;

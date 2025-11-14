@@ -13,7 +13,7 @@ const Signin = () => {
 
   const handleSignIn = async (e) => {
     e.preventDefault();
-    const { session, error } = await signInUser(email, password); // Use your signIn function
+    const { session, error } = await signInUser({email, password}); // Use your signIn function
 
     if (error) {
       setError(error); // Set the error message if sign-in fails
