@@ -21,5 +21,5 @@ Run the following command:
 npm install @supabase/supabase-js
 
 Create a .env file and add the within the quotes from the supabase website:
-VITE_SUPABASE_URL=""
-VITE_SUPABASE_ANON_KEY=""
+VITE_SUPABASE_URL=INPUT-HERE
+VITE_SUPABASE_ANON_KEY=INPUT-HERE
