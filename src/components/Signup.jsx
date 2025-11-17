@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
+import { UseAuth } from '../context/AuthContext';
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +11,7 @@ const Signup = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const { signUpNewUser } = UserAuth();
+  const { signUpNewUser } = UseAuth();
   const navigate = useNavigate();
 
   const handleSignUp = async (e) => {
@@ -34,10 +34,10 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSignUp} className="max-w-md m-auto pt-24">
-        <h2 className="font-bold pb-2">Sign up today!</h2>
-        <p>
+    <div className="flex items-center justify-center min-h-screen">
+      <form onSubmit={handleSignUp} className="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 className="font-bold pb-2 text-center">Sign up today!</h2>
+        <p className="text-center">
           Already have an account? <Link to="/signin" className="text-blue-400 underline" >Sign in</Link>
         </p>
         <div className="flex flex-col py-4">
@@ -84,9 +84,13 @@ const Signup = () => {
             placeholder="Password"
           />
         </div>
-        <button type="submit" disabled={loading} className="w-full mt-4">
-          Sign Up
-        </button>
+        <div className="flex justify-center">
+          <button type="submit" disabled={loading} className="relative group overflow-hidden rounded-full px-4 py-2 bg-black text-center cursor-pointer">
+            {/* Animation */}
+            <span className="absolute inset-0 rounded-full bg-green-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+            <span className="relative z-10 text-white">Sign Up</span>
+          </button>
+        </div>
         {error && <p className="text-red-600 text-center pt-4">{error}</p>}
       </form>
     </div>

@@ -4,10 +4,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Lessons from './pages/Lessons';
 import Profile from './pages/Profile';
-import NotFound from "./pages/notFound";
+import NotFound from "./pages/NotFound";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
-import Signout from "./components/Signout";
 import PrivateRoute from "./components/PrivateRoute";
 
 export const router = createBrowserRouter([
@@ -22,7 +21,6 @@ export const router = createBrowserRouter([
     {path: "/profile", element: <PrivateRoute><Profile/></PrivateRoute>},
     {path: "/signup", element: <Signup/>},
     {path: "/signin", element: <Signin/>},
-    {path: "/signout", element: <Signout/>},
     {path: "*", element: <NotFound/>},
     ],
   },

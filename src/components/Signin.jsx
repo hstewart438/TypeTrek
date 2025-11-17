@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
+import { UseAuth } from '../context/AuthContext';
 
 const Signin = () => {
+  console.log("Rendering Signin component");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const { signInUser } = UserAuth();
+  const { signInUser } = UseAuth();
   const navigate = useNavigate();
 
-  const handleSignIn = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     const { session, error } = await signInUser({email, password}); // Use your signIn function
 
@@ -28,20 +29,19 @@ const Signin = () => {
     }
 
     if (session) {
-      closeModal();
       setError(""); // Reset the error when there's a session
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleSignIn} className="max-w-md m-auto pt-24">
-        <h2 className="font-bold pb-2">Sign in</h2>
-        <p>
-          Don't have an account yet? <Link to="/signup" className="text-blue-400 underline">Sign up</Link>
+    <div className="flex items-center justify-center min-h-screen">
+      <form onSubmit={handleLogin} className="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 className="font-bold pb-2 text-center">Log in</h2>
+        <p className="text-center">
+          Don't have an account? <Link to="/signup" className="text-blue-400 underline" >Sign up</Link>
         </p>
+        
         <div className="flex flex-col py-4">
-          {/* <label htmlFor="Email">Email</label> */}
           <input
             onChange={(e) => setEmail(e.target.value)}
             className="p-3 mt-2 border border-2"
@@ -62,7 +62,13 @@ const Signin = () => {
             placeholder="Password"
           />
         </div>
-        <button className="w-full mt-4">Sign In</button>
+        <div className="flex justify-center">
+          <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-black text-center cursor-pointer">
+            {/* Animation */}
+            <span className="absolute inset-0 rounded-full bg-green-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+            <span className="relative z-10 text-white">Log in</span>
+          </button>
+        </div>
         {error && <p className="text-red-600 text-center pt-4">{error}</p>}
       </form>
     </div>

@@ -1,14 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
+import { UseAuth } from '../context/AuthContext';
 
 const Signout = () => {
-    const { signOutUser } = UserAuth();
+    const { signOutUser } = UseAuth();
     const navigate = useNavigate(); 
 
     const handleSignOut = async () => {
         try {
             await signOutUser(); // Call context function to sign out
-            navigate('/home'); // Redirect to sign-in page after sign out
+            navigate("/home"); // Redirect to sign-in page after sign out
         } catch (error) {
             console.error("Error signing out:", error);
         }
@@ -16,7 +16,7 @@ const Signout = () => {
 
     return (
         <>
-        <button onClick={handleSignOut} className="p-1 mt-1 border border-2 bg-red-500 text-white rounded">
+        <button onClick={handleSignOut} className="border rounded-full border-1 px-2 py-1 bg-black text-white">
             Sign Out
         </button>
         </>
