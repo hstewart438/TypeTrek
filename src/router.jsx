@@ -6,7 +6,7 @@ import Lessons from './pages/Lessons';
 import Profile from './pages/Profile';
 import NotFound from "./pages/NotFound";
 import Signup from "./components/Signup";
-import Signin from "./components/Signin";
+import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 
 export const router = createBrowserRouter([
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
     {path: "/lessons", element: <PrivateRoute><Lessons/></PrivateRoute>},
     {path: "/profile", element: <PrivateRoute><Profile/></PrivateRoute>},
     {path: "/signup", element: <Signup/>},
-    {path: "/signin", element: <Signin/>},
+    {path: "/login", element: <Login/>},
     {path: "*", element: <NotFound/>},
     ],
   },

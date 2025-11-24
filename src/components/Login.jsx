@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UseAuth } from '../context/AuthContext';
 
-const Signin = () => {
+const Login = () => {
   console.log("Rendering Signin component");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -63,10 +63,10 @@ const Signin = () => {
           />
         </div>
         <div className="flex justify-center">
-          <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-black text-center cursor-pointer">
+          <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-slate-300 text-center cursor-pointer">
             {/* Animation */}
-            <span className="absolute inset-0 rounded-full bg-green-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
-            <span className="relative z-10 text-white">Log in</span>
+            <span className="absolute inset-0 rounded-full bg-sky-300 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+            <span className="relative z-10 text-black">Log in</span>
           </button>
         </div>
         {error && <p className="text-red-600 text-center pt-4">{error}</p>}
@@ -75,4 +75,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Login;

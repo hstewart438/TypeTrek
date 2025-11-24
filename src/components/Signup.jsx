@@ -38,7 +38,7 @@ const Signup = () => {
       <form onSubmit={handleSignUp} className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h2 className="font-bold pb-2 text-center">Sign up today!</h2>
         <p className="text-center">
-          Already have an account? <Link to="/signin" className="text-blue-400 underline" >Sign in</Link>
+          Already have an account? <Link to="/login" className="text-blue-400 underline" >Log in</Link>
         </p>
         <div className="flex flex-col py-4">
           {/* <label htmlFor="Email">Email</label> */}
@@ -87,7 +87,7 @@ const Signup = () => {
         <div className="flex justify-center">
           <button type="submit" disabled={loading} className="relative group overflow-hidden rounded-full px-4 py-2 bg-black text-center cursor-pointer">
             {/* Animation */}
-            <span className="absolute inset-0 rounded-full bg-green-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+            <span className="absolute inset-0 rounded-full bg-sky-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
             <span className="relative z-10 text-white">Sign Up</span>
           </button>
         </div>

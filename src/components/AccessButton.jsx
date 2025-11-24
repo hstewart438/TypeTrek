@@ -29,8 +29,20 @@ const AccessButton = () => {
             </button>) 
         : (
             <div className="flex items-center space-x-2 ">
-                <Link to="/signin" className="border rounded-full border-2 px-2 py-1 bg-white text-black">Log in</Link>
-                <Link to="/signup" className="border rounded-full border-2 px-2 py-1 bg-black text-white">Sign up</Link>
+                <Link to="/login">
+                    <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-slate-300 text-center cursor-pointer">
+                        {/* Log in */}
+                        <span className="absolute inset-0 rounded-full bg-sky-300 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+                        <span className="relative z-10 text-black">Log in</span>
+                    </button>
+                </Link>
+                <Link to="/signup">
+                    <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-black text-center cursor-pointer">
+                        {/* sign up */}
+                        <span className="absolute inset-0 rounded-full bg-sky-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+                        <span className="relative z-10 text-white group-hover:text-white transition-colors duration-500">Sign up</span>
+                    </button>
+                </Link>
             </div>
            )
         }
