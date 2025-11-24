@@ -1,5 +1,5 @@
 import React from 'react';
-import { UseAuth } from '../context/AuthContext';
+import { UseAuth } from '../../context/AuthContext';
 
 const PrivateRoute = ({ children }) => {
   const { session } = UseAuth();

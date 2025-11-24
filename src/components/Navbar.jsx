@@ -1,5 +1,5 @@
 import Mountain from '../assets/mountain.svg';
-import AccessButton from './AccessButton';
+import AccessButton from './Access/AccessButton';
 import { Link } from 'react-router-dom';
 
 function Navbar() {

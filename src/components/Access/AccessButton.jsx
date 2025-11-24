@@ -1,4 +1,4 @@
-import { UseAuth } from '../context/AuthContext';
+import { UseAuth } from '../../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';    
 
 const AccessButton = () => {

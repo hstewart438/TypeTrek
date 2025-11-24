@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UseAuth } from '../context/AuthContext';
+import { UseAuth } from '../../context/AuthContext';
 
 const Login = () => {
   console.log("Rendering Signin component");

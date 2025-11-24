@@ -5,9 +5,9 @@ import About from './pages/About';
 import Lessons from './pages/Lessons';
 import Profile from './pages/Profile';
 import NotFound from "./pages/NotFound";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
-import PrivateRoute from "./components/PrivateRoute";
+import Signup from "./components/Access/Signup";
+import Login from "./components/Access/Login";
+import PrivateRoute from "./components/Access/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
