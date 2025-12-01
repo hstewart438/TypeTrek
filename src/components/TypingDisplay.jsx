@@ -1,7 +1,7 @@
 import Caret from "./Caret";
 import cn from "classnames";
 
-const UserTypings = ({ userInput, words, className = "" }) => {
+const TypingDisplay = ({ userInput, words, className = "" }) => {
   const typedCharacters = userInput.split("");
 
   return (
@@ -35,4 +35,4 @@ const Character = ({ actual, expected }) => {
   );
 };
 
-export default UserTypings;
+export default TypingDisplay;

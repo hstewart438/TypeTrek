@@ -1,6 +1,8 @@
-import Mountain from '../assets/mountain.svg';
-import AccessButton from './Access/AccessButton';
 import { Link } from 'react-router-dom';
+
+import Mountain from '../assets/mountain.svg';
+import AccessButton from './access/AccessButton';
+import Admin from '../pages/Admin';
 
 function Navbar() {
   return (
@@ -32,6 +34,9 @@ function Navbar() {
             </li>
             <li>
               <AccessButton />
+            </li>
+            <li>
+              <Link className="text-black" to="/admin">Admin</Link>
             </li>
           </ul>
         </div>

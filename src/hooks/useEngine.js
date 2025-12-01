@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { countErrors, debug } from "../utils/helpers";
 import useCountdown from "./useCountdown";
-import useTypings from "./useTypingInput";
+import useTypingInput from "./useTypingInput";
 import useWords from "./useWords";
 
 const NUMBER_OF_WORDS = 87;
@@ -11,7 +11,7 @@ const useEngine = () => {
   const [state, setState] = useState("start");
   const { timeLeft, startCountdown, resetCountdown } = useCountdown(COUNTDOWN_SECONDS);
   const { words, updateWords } = useWords(NUMBER_OF_WORDS);
-  const { cursor, typed, clearTyped, totalTyped, resetTotalTyped } = useTypings(
+  const { cursor, typed, clearTyped, totalTyped, resetTotalTyped } = useTypingInput(
     state !== "finish"
   );
   const [errors, setErrors] = useState(0);

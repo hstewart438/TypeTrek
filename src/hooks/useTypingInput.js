@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { isKeyboardCodeAllowed } from "../utils/helpers";
 
-const useTypings = (enabled) => {
+const useTypingInput = (enabled) => {
   const [cursor, setCursor] = useState(0);
   const [typed, setTyped] = useState("");
   const totalTyped = useRef(0);
@@ -53,4 +53,4 @@ const useTypings = (enabled) => {
   };
 };
 
-export default useTypings;
+export default useTypingInput;

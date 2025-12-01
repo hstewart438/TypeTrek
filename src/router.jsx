@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Signup from "./components/Access/Signup";
 import Login from "./components/Access/Login";
 import PrivateRoute from "./components/Access/PrivateRoute";
+import Admin from "./pages/Admin";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
     {path: "/profile", element: <PrivateRoute><Profile/></PrivateRoute>},
     {path: "/signup", element: <Signup/>},
     {path: "/login", element: <Login/>},
+    {path: "/admin", element: <Admin/>},
     {path: "*", element: <NotFound/>},
     ],
   },

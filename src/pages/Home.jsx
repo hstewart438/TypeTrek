@@ -2,7 +2,7 @@ import React from "react";
 import GeneratedWords from "../components/GeneratedWords";
 import RestartButton from "../components/RestartButton";
 import Results from "../components/Results";
-import UserTypings from "../components/UserTyping";
+import TypingDisplay from "../components/TypingDisplay";
 import useEngine from "../hooks/useEngine";
 import { calculateAccuracyPercentage } from "../utils/helpers";
 
@@ -17,7 +17,7 @@ function Home () {
         <div className="relative w-full max-w-screen-xl p-6 bg-white rounded shadow">
           <WordsContainer>
             <GeneratedWords key={words} words={words} />
-            <UserTypings
+            <TypingDisplay
               className="absolute inset-0"
               words={words}
               userInput={typed}
