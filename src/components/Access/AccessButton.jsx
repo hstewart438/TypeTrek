@@ -22,11 +22,14 @@ const AccessButton = () => {
     return (
         <>
         {session 
-        ? (<button onClick={handleSignOut} className="relative group overflow-hidden rounded-full p-2 bg-black cursor-pointer">
+        ? (
+            <div className="flex items-center space-x-2 ">
+                <button onClick={handleSignOut} className="relative group overflow-hidden rounded-full p-2 bg-black cursor-pointer">
             {/* Animation */}
                 <span className="absolute inset-0 rounded-full bg-red-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
                 <span className="relative z-10 text-white">Sign out</span>
-            </button>) 
+            </button>
+            </div>) 
         : (
             <div className="flex items-center space-x-2 ">
                 <Link to="/login">

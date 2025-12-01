@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import Mountain from '../assets/mountain.svg';
 import AccessButton from './access/AccessButton';
-import Admin from '../pages/Admin';
+import AdminAccess from './access/AdminAccess';
 
 function Navbar() {
   return (
@@ -21,6 +21,9 @@ function Navbar() {
         <div className="ml-auto" id="navbar-default">
           <ul className="flex flex-row items-center justify-between w-full max-w-xl mx-auto space-x-4">
             <li>
+              <AdminAccess/>
+            </li>
+            <li>
               <Link className="text-black" to="/">Home</Link>
             </li>
             <li>
@@ -34,9 +37,6 @@ function Navbar() {
             </li>
             <li>
               <AccessButton />
-            </li>
-            <li>
-              <Link className="text-black" to="/admin">Admin</Link>
             </li>
           </ul>
         </div>
