@@ -1,12 +1,15 @@
-import Navbar from './components/Navbar';
 import { Outlet } from 'react-router-dom';
-import "./styles/index.css"
+import { UseAuth } from "./context/AuthContext";
+import Navbar from "./components/Navbar";
 
-export default function App() {
+function App() {
+  const { user } = UseAuth();
   return (
-     <>
-      <Navbar/>
-      <Outlet/>
-    </>
+      <div className="bg-gray-100 min-h-screen font-mono">
+        <Navbar />
+        <Outlet/>
+      </div>
   );
 }
+
+export default App;

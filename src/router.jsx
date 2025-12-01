@@ -4,11 +4,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Lessons from './pages/Lessons';
 import Profile from './pages/Profile';
-import NotFound from "./pages/notFound";
-import Signup from "./components/Signup";
-import Signin from "./components/Signin";
-import Signout from "./components/Signout";
-import PrivateRoute from "./components/PrivateRoute";
+import NotFound from "./pages/NotFound";
+import Signup from "./components/Access/Signup";
+import Login from "./components/Access/Login";
+import PrivateRoute from "./components/Access/PrivateRoute";
+import Admin from "./pages/Admin";
 
 export const router = createBrowserRouter([
   {
@@ -21,8 +21,8 @@ export const router = createBrowserRouter([
     {path: "/lessons", element: <PrivateRoute><Lessons/></PrivateRoute>},
     {path: "/profile", element: <PrivateRoute><Profile/></PrivateRoute>},
     {path: "/signup", element: <Signup/>},
-    {path: "/signin", element: <Signin/>},
-    {path: "/signout", element: <Signout/>},
+    {path: "/login", element: <Login/>},
+    {path: "/admin", element: <Admin/>},
     {path: "*", element: <NotFound/>},
     ],
   },
