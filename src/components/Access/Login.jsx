@@ -34,42 +34,77 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <form onSubmit={handleLogin} className="bg-white p-8 rounded shadow-md w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen" style={{ backgroundColor: "var(--bg)", minHeight: "100vh" }}>     
+      <form
+        onSubmit={handleLogin}
+        className="p-8 rounded shadow-md w-full max-w-md"
+        style={{
+          backgroundColor: "var(--bg-elevated)",
+          color: "var(--text)",
+          border: "1px solid var(--border)",
+          transition: "background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease",
+        }}
+      >
         <h2 className="font-bold pb-2 text-center">Log in</h2>
-        <p className="text-center">
-          Don't have an account? <Link to="/signup" className="text-blue-400 underline" >Sign up</Link>
+        <p className="text-center" style={{ color: "var(--muted)" }}>
+          Don't have an account?{" "}
+          <Link to="/signup" style={{ color: "var(--text)" }} className="underline">
+            Sign up
+          </Link>
         </p>
-        
+
         <div className="flex flex-col py-4">
           <input
             onChange={(e) => setEmail(e.target.value)}
-            className="p-3 mt-2 border border-2"
             type="email"
             name="email"
             id="email"
             placeholder="Email"
+            className="p-3 mt-2 rounded"
+            style={{
+              backgroundColor: "var(--bg)",
+              color: "var(--text)",
+              border: "1px solid var(--border)",
+            }}
           />
         </div>
+
         <div className="flex flex-col py-4">
-          {/* <label htmlFor="Password">Password</label> */}
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="p-3 mt-2 border border-2"
             type="password"
             name="password"
             id="password"
             placeholder="Password"
+            className="p-3 mt-2 rounded"
+            style={{
+              backgroundColor: "var(--bg)",
+              color: "var(--text)",
+              border: "1px solid var(--border)",
+            }}
           />
         </div>
+
         <div className="flex justify-center">
-          <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-slate-300 text-center cursor-pointer">
-            {/* Animation */}
-            <span className="absolute inset-0 rounded-full bg-sky-300 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
-            <span className="relative z-10 text-black">Log in</span>
+          <button
+            type="submit"
+            className="relative group overflow-hidden rounded-full px-4 py-2 text-center cursor-pointer"
+            style={{
+              backgroundColor: "var(--border)",
+              color: "var(--text)",
+            }}
+          >
+            <span className="absolute inset-0 rounded-full bg-sky-300 text-black scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+            <span className="relative z-10 group-hover:text-black duration-500">Log in</span>
           </button>
         </div>
-        {error && <p className="text-red-600 text-center pt-4">{error}</p>}
+
+        {error && (
+          <p className="text-center pt-4" style={{ color: "var(--muted)" }}>
+            {error}
+          </p>
+        )}
+
       </form>
     </div>
   );

@@ -30,6 +30,11 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
+      onKeyDown={(e) => {
+        if (e.code === "Space") {
+          e.preventDefault(); // stop spacebar from triggering click
+        }
+      }}
       style={{
         position: "fixed",
         bottom: "20px",

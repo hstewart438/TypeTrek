@@ -29,21 +29,34 @@ const AccessButton = () => {
                 <span className="absolute inset-0 rounded-full bg-red-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
                 <span className="relative z-10 text-white">Sign out</span>
             </button>
-            </div>) 
+            </div>
+            ) 
         : (
-            <div className="flex items-center space-x-2 ">
+            <div className="flex items-center space-x-2">
                 <Link to="/login">
-                    <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-slate-300 text-center cursor-pointer">
-                        {/* Log in */}
+                    <button
+                        className="relative group overflow-hidden rounded-full px-4 py-2 text-center shadow-sm cursor-pointer"
+                        style={{
+                        backgroundColor: "var(--bg-elevated)",
+                        color: "var(--text)",
+                        border: "1px solid var(--border)",
+                        }}
+                    >
                         <span className="absolute inset-0 rounded-full bg-sky-300 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
-                        <span className="relative z-10 text-black">Log in</span>
+                        <span className="relative z-10 group-hover:text-black duration-500">Log in</span>
                     </button>
                 </Link>
                 <Link to="/signup">
-                    <button className="relative group overflow-hidden rounded-full px-4 py-2 bg-black text-center cursor-pointer">
-                        {/* sign up */}
-                        <span className="absolute inset-0 rounded-full bg-sky-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
-                        <span className="relative z-10 text-white group-hover:text-white transition-colors duration-500">Sign up</span>
+                    <button
+                        className="relative group overflow-hidden rounded-full px-4 py-2 text-center cursor-pointer shadow-sm"
+                        style={{
+                        backgroundColor: "var(--bg-elevated)",
+                        color: "var(--text)",
+                        border: "1px solid var(--border)",
+                        }}
+                    >
+                        <span className="absolute inset-0 rounded-full bg-amber-400 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+                        <span className="relative z-10 group-hover:text-black duration-500">Sign up</span>
                     </button>
                 </Link>
             </div>
