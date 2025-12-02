@@ -18,8 +18,13 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Supabase Connection
 
 Run the following command:
-npm install @supabase/supabase-js
+npm install
 
 Create a .env file and add the within the quotes from the supabase website:
 VITE_SUPABASE_URL=INPUT-HERE
 VITE_SUPABASE_ANON_KEY=INPUT-HERE
+
+## Project Startup
+
+npm install
+npm run dev
