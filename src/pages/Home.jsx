@@ -12,9 +12,9 @@ function Home () {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 gap-y-6">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-[var(--bg)] gap-y-6">
         <CountdownTimer timeLeft={timeLeft} />
-        <div className="relative w-full max-w-screen-xl p-6 bg-white rounded shadow">
+        <div className="relative w-full max-w-screen-xl p-6 bg-[var(--bg-elevated)] rounded shadow">
           <WordsContainer>
             <GeneratedWords key={words} words={words} />
             <TypingDisplay
@@ -25,7 +25,7 @@ function Home () {
           </WordsContainer>
         </div>
         <RestartButton
-          className="mx-auto mt-4 text-slate-500"
+          className="mx-auto mt-4 text-[var(--muted)]"
           onRestart={restart}
         />
         <Results
@@ -49,7 +49,7 @@ const WordsContainer = ({ children }) => {
 };
 
 const CountdownTimer = ({ timeLeft }) => {
-  return <h2 className="text-primary-400 font-medium">Time: {timeLeft}</h2>;
+  return <h2 className="font-medium text-[var(--text)]">Time: {timeLeft}</h2>;
 };
 
 export default Home;
