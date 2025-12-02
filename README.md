@@ -26,5 +26,8 @@ VITE_SUPABASE_ANON_KEY=INPUT-HERE
 
 ## Project Startup
 
+Run to install project dependencies:
 npm install
+
+Then to start website locally:
 npm run dev
