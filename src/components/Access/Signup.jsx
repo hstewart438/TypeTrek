@@ -37,11 +37,10 @@ const Signup = () => {
     <div className="flex items-center justify-center min-h-screen" style={{ backgroundColor: "var(--bg)", minHeight: "100vh" }}>
       <form
         onSubmit={handleSignUp}
-        className="p-8 rounded shadow-md w-full max-w-md"
+        className="p-8 rounded shadow-md w-full max-w-md border border-2 border-amber-400"
         style={{
           backgroundColor: "var(--bg-elevated)",
           color: "var(--text)",
-          border: "1px solid var(--border)",
           transition: "background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease",
         }}
       >
@@ -56,15 +55,15 @@ const Signup = () => {
         <div className="flex flex-col py-4">
           <input
             onChange={(e) => setEmail(e.target.value)}
-            className="p-3 mt-2 rounded"
-            type="email"
+            type="text"
             name="email"
             id="email"
             placeholder="Email"
+            className="p-3 mt-2 rounded border border-[var(--border)] 
+                      focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
             style={{
               backgroundColor: "var(--bg)",
               color: "var(--text)",
-              border: "1px solid var(--border)",
             }}
           />
         </div>
@@ -72,7 +71,8 @@ const Signup = () => {
         <div className="flex flex-col py-4">
           <input
             onChange={(e) => setFirstName(e.target.value)}
-            className="p-3 mt-2 rounded"
+            className="p-3 mt-2 rounded border border-[var(--border)] 
+                      focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
             type="text"
             name="firstName"
             id="firstName"
@@ -80,7 +80,6 @@ const Signup = () => {
             style={{
               backgroundColor: "var(--bg)",
               color: "var(--text)",
-              border: "1px solid var(--border)",
             }}
           />
         </div>
@@ -88,7 +87,8 @@ const Signup = () => {
         <div className="flex flex-col py-4">
           <input
             onChange={(e) => setLastName(e.target.value)}
-            className="p-3 mt-2 rounded"
+            className="p-3 mt-2 rounded border border-[var(--border)] 
+             focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
             type="text"
             name="lastName"
             id="lastName"
@@ -96,7 +96,6 @@ const Signup = () => {
             style={{
               backgroundColor: "var(--bg)",
               color: "var(--text)",
-              border: "1px solid var(--border)",
             }}
           />
         </div>
@@ -104,7 +103,8 @@ const Signup = () => {
         <div className="flex flex-col py-4">
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="p-3 mt-2 rounded"
+            className="p-3 mt-2 rounded border border-[var(--border)] 
+             focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
             type="password"
             name="password"
             id="password"
@@ -112,7 +112,6 @@ const Signup = () => {
             style={{
               backgroundColor: "var(--bg)",
               color: "var(--text)",
-              border: "1px solid var(--border)",
             }}
           />
         </div>

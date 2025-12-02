@@ -37,11 +37,10 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen" style={{ backgroundColor: "var(--bg)", minHeight: "100vh" }}>     
       <form
         onSubmit={handleLogin}
-        className="p-8 rounded shadow-md w-full max-w-md"
+        className="p-8 rounded shadow-md w-full max-w-md border border-2 border-sky-300"
         style={{
           backgroundColor: "var(--bg-elevated)",
           color: "var(--text)",
-          border: "1px solid var(--border)",
           transition: "background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease",
         }}
       >
@@ -60,11 +59,11 @@ const Login = () => {
             name="email"
             id="email"
             placeholder="Email"
-            className="p-3 mt-2 rounded"
+            className="p-3 mt-2 rounded border border-[var(--border)] 
+                      focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
             style={{
               backgroundColor: "var(--bg)",
               color: "var(--text)",
-              border: "1px solid var(--border)",
             }}
           />
         </div>
@@ -76,11 +75,12 @@ const Login = () => {
             name="password"
             id="password"
             placeholder="Password"
-            className="p-3 mt-2 rounded"
+            className="p-3 mt-2 rounded border border-[var(--border)] 
+                      focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
             style={{
               backgroundColor: "var(--bg)",
               color: "var(--text)",
-              border: "1px solid var(--border)",
+  
             }}
           />
         </div>

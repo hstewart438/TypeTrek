@@ -24,11 +24,18 @@ const AccessButton = () => {
         {session 
         ? (
             <div className="flex items-center space-x-2 ">
-                <button onClick={handleSignOut} className="relative group overflow-hidden rounded-full p-2 bg-black cursor-pointer">
-            {/* Animation */}
-                <span className="absolute inset-0 rounded-full bg-red-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
-                <span className="relative z-10 text-white">Sign out</span>
-            </button>
+                <button
+    
+                    onClick={handleSignOut}
+                    className="relative group overflow-hidden rounded-full px-4 py-2 text-center shadow-sm cursor-pointer"
+                    style={{
+                    backgroundColor: "var(--border)",
+                    color: "var(--text)",
+                    }}
+                >
+                    <span className="absolute inset-0 rounded-full bg-red-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
+                    <span className="relative z-10 group-hover:text-white duration-500">Sign out</span>
+                </button>
             </div>
             ) 
         : (
