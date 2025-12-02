@@ -9,11 +9,13 @@ function Navbar() {
     <nav className="navbar">
       <div className="flex flex-wrap items-center justify-between p-4">
         <div className="flex items-center space-x-4 rtl:space-x-reverse mr-auto">
+        <div className="w-12 h-12 rounded-full bg-[#edf0f7] flex items-center justify-center overflow-hidden border border-2 border-black">
           <img
             src={Mountain}
-            className="logo-circle relative w-12 h-12 rounded-full"
+            className="w-10 h-10 object-contain"
             alt="logo here not loaded"
           />
+        </div>
           <div className="self-center text-2xl font-semibold whitespace-nowrap">
             <Link to="/">TypeTrek</Link>
           </div>
