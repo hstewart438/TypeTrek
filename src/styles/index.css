@@ -37,6 +37,11 @@ body {
   overflow: scroll;
 }
 
+html, body {
+        height: 100%;
+        overflow: hidden;
+    }
+
 #root {
   min-height: 100vh;
   background-color: var(--bg);
