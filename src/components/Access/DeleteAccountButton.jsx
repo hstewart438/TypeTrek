@@ -56,11 +56,16 @@ const DeleteAccountButton = () => {
     <>
         <button
             onClick={() => setShowModal(true)}
+            className="relative group overflow-hidden rounded px-4 py-2 text-center shadow-sm cursor-pointer"
+            style={{
+              backgroundColor: "var(--bg-elevated)",
+              color: "var(--text)",
+              border: "1px solid var(--border)",
+            }}    
             disabled={loading}
-            className="relative group overflow-hidden rounded px-4 py-2 bg-black text-center cursor-pointer"
         >
             <span className="absolute inset-0 rounded-full bg-red-600 scale-0 group-hover:scale-150 transition-transform duration-500"></span>
-            <span className="relative z-10 text-white group-hover:text-white transition-colors duration-500">Delete Account</span>
+            <span className="relative z-10 group-hover:text-white duration-500">Delete Account</span>
         </button>
 
         {showModal && (

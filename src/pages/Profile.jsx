@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
+import DeleteAccountButton from "../components/Access/DeleteAccountButton";
 
 const formatPercentage = (value) => {
   if (value == null) return "–";
@@ -228,6 +229,9 @@ function Profile() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center py-12">
+        <DeleteAccountButton/>
       </div>
     </div>
   );
